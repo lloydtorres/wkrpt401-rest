@@ -1,0 +1,18 @@
+{
+  "name": "wkrpt401-rest",
+  "version": "0.0.1",
+  "repository": "https://github.com/lloydtorres/wkrpt401-rest.git",
+  "license": "MIT",
+  "main": "server.js",
+  "engines": {
+    "node": "7.2.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "monitor": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2"
+  }
+}
