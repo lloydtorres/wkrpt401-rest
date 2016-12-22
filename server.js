@@ -7,6 +7,11 @@ app.use(bodyParser.json());
 
 var router = express.Router();
 
+router.get('/', function(req, res) {
+  console.log("/api/ called.")
+  res.json({ response: "API Operational "})
+})
+
 router.post('/best-personality', function(req, res) {
   let userData = req.body;
   let name = userData.name;
