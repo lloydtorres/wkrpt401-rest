@@ -12,6 +12,8 @@ router.get('/', function(req, res) {
   res.json({ response: "API Operational "})
 })
 
+var requestCount = 0
+
 router.post('/best-personality', function(req, res) {
   let userData = req.body;
   let name = userData.name;
@@ -33,7 +35,8 @@ router.post('/best-personality', function(req, res) {
                     + maxPersonalityName + " @ "
                     + maxPersonalityValue;
 
-  console.log("/api/best-personality called with response '" + response + "'");
+  requestCount++
+  console.log("/api/best-personality called with response '" + response + "'" + " (request #" + requestCount + ")");
   res.json({ response: response });
 });
 
